@@ -48,6 +48,7 @@ namespace CashRegister
 
         private void calculateButton1_Click(object sender, EventArgs e)
         {
+            changeButton.Enabled = true;
             Cashregister.Play();
             mask = Convert.ToDouble(itemBox1.Text);
             maskprice = mask * maskprice;
@@ -66,6 +67,7 @@ namespace CashRegister
 
         private void changeButton_Click(object sender, EventArgs e)
         {
+            printButton.Enabled = true;
             tendered = Convert.ToDouble(tenderedBox.Text);
             change = tendered - total;
 
@@ -75,7 +77,7 @@ namespace CashRegister
         private void button2_Click(object sender, EventArgs e)
         {
             Reciept.Play();
-            
+            neworderButton.Enabled = true;
             receiptLabel.Text = "The COVID Shop";
             Refresh();
             Thread.Sleep(500);
@@ -107,10 +109,16 @@ namespace CashRegister
         private void Form1_Load(object sender, EventArgs e)
         {
             Bell.Play();
+            changeButton.Enabled = false;
+            printButton.Enabled = false;
+            neworderButton.Enabled = false;
         }
 
         private void neworderButton_Click(object sender, EventArgs e)
         {
+            changeButton.Enabled = false;
+            printButton.Enabled = false;
+            neworderButton.Enabled = false;
             mask = default(double);
             maskprice = 4.50;
             sanitizer = default(double);
