@@ -264,7 +264,7 @@ namespace CashRegister
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CashRegister.Properties.Resources.mask;
-            this.pictureBox1.Location = new System.Drawing.Point(387, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(387, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
