@@ -93,12 +93,6 @@
     <None Include="Resources\345056__azumarill__epson-receipt-printer3.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mask.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mask.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\mask1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +100,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bell.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Systems-Mac-Os.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,17 +18,17 @@ namespace CashRegister
     public partial class Form1 : Form
     {       
         // variables
-        double mask;
-        double sanitizer;
-        double gloves;
+        double iPhone;
+        double iPad;
+        double AirPods;
         double subtotal;
         double tax = 0.13;
         double total;
         double tendered;
         double change;
-        double maskprice = 4.50;
-        double sanitizerprice = 7.50;
-        double glovesprice = 3.25;
+        double iPhonePrice = 400;
+        double iPadPrice = 500;
+        double AirPodsPrice = 200;
         string date = DateTime.Now.ToString("MMMM dd, yyyy");
         
         // sound players
@@ -50,13 +50,13 @@ namespace CashRegister
         {
             changeButton.Enabled = true;
             Cashregister.Play();
-            mask = Convert.ToDouble(itemBox1.Text);
-            maskprice = mask * maskprice;
-            sanitizer = Convert.ToDouble(itemBox2.Text);
-            sanitizerprice = sanitizer * sanitizerprice;
-            gloves = Convert.ToDouble(itemBox3.Text);
-            glovesprice = gloves * glovesprice;
-            subtotal = maskprice + sanitizerprice + glovesprice;
+            iPhone = Convert.ToDouble(itemBox1.Text);
+            iPhonePrice = iPhone * iPhonePrice;
+            iPad = Convert.ToDouble(itemBox2.Text);
+            iPadPrice = iPad * iPadPrice;
+            AirPods = Convert.ToDouble(itemBox3.Text);
+            AirPodsPrice = AirPods * AirPodsPrice;
+            subtotal = iPhonePrice + iPadPrice + AirPodsPrice;
             tax = tax * subtotal;
             total = tax + subtotal;
 
@@ -78,19 +78,19 @@ namespace CashRegister
         {
             Reciept.Play();
             neworderButton.Enabled = true;
-            receiptLabel.Text = "The COVID Shop";
+            receiptLabel.Text = "Apple";
             Refresh();
             Thread.Sleep(500);
             receiptLabel.Text += $"\n\n{date}";
             Refresh();
             Thread.Sleep(500);
-            receiptLabel.Text += $"\n\nMasks x{mask} @ {maskprice.ToString("$0.00")}";
+            receiptLabel.Text += $"\n\niPhone(s) x{iPhone} @ {iPhonePrice.ToString("$0.00")}";
             Refresh();
             Thread.Sleep(500);
-            receiptLabel.Text += $"\n\nSanitizer x{sanitizer} @ {sanitizerprice.ToString("$0.00")}";
+            receiptLabel.Text += $"\n\niPad(s) x{iPad} @ {iPadPrice.ToString("$0.00")}";
             Refresh();
             Thread.Sleep(500);
-            receiptLabel.Text += $"\n\nGloves x{gloves} @ {glovesprice.ToString("$0.00")}";
+            receiptLabel.Text += $"\n\nAirPods x{AirPods} @ {AirPodsPrice.ToString("$0.00")}";
             Refresh();
             Thread.Sleep(500);
             receiptLabel.Text += $"\n\nSubtotal {subtotal.ToString("$0.00")}";
@@ -102,7 +102,7 @@ namespace CashRegister
             receiptLabel.Text += $"\n\nTotal {total.ToString("$0.00")}";
             Refresh();
             Thread.Sleep(500);
-            receiptLabel.Text += "\n\nHave a great day! :)";
+            receiptLabel.Text += "\n\nThank you!";
 
         }
 
@@ -119,12 +119,12 @@ namespace CashRegister
             changeButton.Enabled = false;
             printButton.Enabled = false;
             neworderButton.Enabled = false;
-            mask = default(double);
-            maskprice = 4.50;
-            sanitizer = default(double);
-            sanitizerprice = 7.50;
-            gloves = default(double);
-            glovesprice = 3.25;
+            iPhone = default(double);
+            iPhonePrice = 400;
+            iPad = default(double);
+            iPadPrice = 500;
+            AirPods = default(double);
+            AirPodsPrice = 200;
             tax = 0.13;
 
             itemBox1.Text = "";
@@ -135,7 +135,7 @@ namespace CashRegister
             totalLabel.Text = "Total";
             tenderedBox.Text = "";
             changeLabel.Text = "";
-            receiptLabel.Text = "Anything else?";
+            receiptLabel.Text = "Welcome!";
         }
     }
 
